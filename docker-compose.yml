@@ -1,0 +1,20 @@
+db:
+  container_name: ipokr-db
+  image: postgres:9.4
+  ports:
+    - "5432:5432"
+  environment:
+    POSTGRES_PASSWORD: 1234
+
+app:
+  container_name: ipokr
+  build: .
+  dockerfile: Dockerfile
+  ports:
+    - "3000:3000"
+  volumes:
+    - ".:/app"
+  env_file:
+    - ./.env.docker_compose
+  links:
+    - db
