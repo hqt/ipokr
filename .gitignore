@@ -8,7 +8,9 @@
 /.bundle
 
 # ignore idea folder
-idea
+.idea
+.ruby-version
+tags
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
