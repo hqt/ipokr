@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160807160459) do
   end
 
   create_table "books", force: :cascade do |t|
+    t.integer  "author_id",      null: false
     t.string   "book_name",      null: false
     t.string   "book_publisher", null: false
     t.string   "isbn"
@@ -78,4 +79,5 @@ ActiveRecord::Schema.define(version: 20160807160459) do
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
   end
 
+  add_foreign_key "books", "authors"
 end

@@ -38,6 +38,9 @@ gem 'redis', '~> 3.0'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 
+#admin ui inteface decoration
+gem 'rails_admin_rollincode', '~> 1.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
